@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="700" prefWidth="1000" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.appointmentrecord.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox prefHeight="685.0" prefWidth="961.0">
+      <children>
+         <VBox fx:id="usersVbox" alignment="TOP_CENTER" prefHeight="653.0" prefWidth="250.0">
+            <children>
+                <Button alignment="TOP_CENTER" onAction="#onAddUserButtonClick" text="Add User" />
+            </children>
+         </VBox>
+         <TabPane prefHeight="469.0" prefWidth="875.0" tabClosingPolicy="UNAVAILABLE">
+           <tabs>
+             <Tab text="Profile">
+               <content>
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                           <Label fx:id="testLabel" layoutX="44.0" layoutY="36.0" text="Default" />
+                        </children>
+                     </AnchorPane>
+               </content>
+             </Tab>
+             <Tab text="Record">
+               <content>
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="440.0" prefWidth="639.0" />
+               </content>
+             </Tab>
+           </tabs>
+         </TabPane>
+      </children>
+   </HBox>
+</VBox>
