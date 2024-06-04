@@ -1,34 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="700" prefWidth="1000" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.appointmentrecord.MainController">
+<VBox prefHeight="700.0" prefWidth="1000.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appointmentrecord.MainController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <HBox prefHeight="685.0" prefWidth="961.0">
+   <HBox prefHeight="740.0" prefWidth="1065.0">
       <children>
          <VBox fx:id="usersVbox" alignment="TOP_CENTER" prefHeight="653.0" prefWidth="250.0">
             <children>
-                <Button alignment="TOP_CENTER" onAction="#onAddUserButtonClick" text="Add User" />
+                <Button alignment="TOP_CENTER" onAction="#OnAddUserButtonClick" text="Add User" />
             </children>
          </VBox>
          <TabPane prefHeight="469.0" prefWidth="875.0" tabClosingPolicy="UNAVAILABLE">
            <tabs>
              <Tab text="Profile">
                <content>
-                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="628.0" prefWidth="798.0">
                         <children>
-                           <Label fx:id="testLabel" layoutX="44.0" layoutY="36.0" text="Default" />
+                           <Label layoutX="24.0" layoutY="14.0" prefHeight="21.0" prefWidth="45.0" text="Name:">
+                              <font>
+                                 <Font size="15.0" />
+                              </font></Label>
+                           <TextField layoutX="71.0" layoutY="10.0" prefHeight="26.0" prefWidth="187.0">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </TextField>
+                           <Label layoutX="344.0" layoutY="14.0" text="Date of Birth: ">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Label>
+                           <DatePicker layoutX="436.0" layoutY="10.0" />
+                           <Label layoutX="629.0" layoutY="15.0" text="(Age preview)">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="24.0" layoutY="67.0" text="Height:">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="136.0" layoutY="67.0" text="ft">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="222.0" layoutY="67.0" text="in">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Label>
+                           <TextField layoutX="77.0" layoutY="65.0" prefHeight="26.0" prefWidth="55.0" promptText="5" />
+                           <TextField layoutX="156.0" layoutY="65.0" prefHeight="26.0" prefWidth="55.0" promptText="9" />
+                           <Label layoutX="344.0" layoutY="68.0" text="Weight:">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Label>
+                           <TextField layoutX="397.0" layoutY="65.0" prefHeight="26.0" prefWidth="55.0" promptText="120" />
+                           <Label layoutX="465.0" layoutY="69.0" text="lbs">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="23.0" layoutY="128.0" text="Emergency Contact">
+                              <font>
+                                 <Font name="System Bold" size="18.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="24.0" layoutY="174.0" prefHeight="21.0" prefWidth="45.0" text="Name:">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Label>
+                           <TextField layoutX="71.0" layoutY="170.0" prefHeight="26.0" prefWidth="187.0" promptText="Khac Bao An Le">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </TextField>
+                           <Label layoutX="344.0" layoutY="173.0" prefHeight="21.0" prefWidth="58.0" text="Phone:">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Label>
+                           <TextField layoutX="397.0" layoutY="172.0" prefHeight="26.0" prefWidth="116.0" promptText="(909)-365-0157">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </TextField>
+                           <Label layoutX="557.0" layoutY="175.0" prefHeight="21.0" prefWidth="89.0" text="Relationship:">
+                              <font>
+                                 <Font size="15.0" />
+                              </font>
+                           </Label>
+                           <TextField layoutX="647.0" layoutY="173.0" prefHeight="26.0" prefWidth="55.0" promptText="Son" />
+                           <Label layoutX="23.0" layoutY="228.0" text="Note">
+                              <font>
+                                 <Font name="System Bold" size="18.0" />
+                              </font>
+                           </Label>
+                           <TextField alignment="TOP_LEFT" layoutX="23.0" layoutY="272.0" prefHeight="270.0" prefWidth="740.0" promptText="Preview text">
+                              <font>
+                                 <Font size="14.0" />
+                              </font></TextField>
+                           <Button layoutX="665.0" layoutY="550.0" mnemonicParsing="false" text="Save Changes" />
                         </children>
                      </AnchorPane>
                </content>
              </Tab>
              <Tab text="Record">
                <content>
-                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="440.0" prefWidth="639.0" />
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="440.0" prefWidth="639.0">
+                        <children>
+                           <TableView editable="true" layoutX="12.0" layoutY="8.0" prefHeight="549.0" prefWidth="772.0">
+                             <columns>
+                               <TableColumn prefWidth="39.0" text="#" />
+                               <TableColumn prefWidth="379.0" text="Label" />
+                                 <TableColumn prefWidth="120.0" text="Time" />
+                                 <TableColumn prefWidth="119.0" text="Date" />
+                                 <TableColumn prefWidth="136.0" text="Category" />
+                             </columns>
+                           </TableView>
+                           <Button layoutX="688.0" layoutY="565.0" mnemonicParsing="false" text="Add Record" />
+                        </children></AnchorPane>
                </content>
              </Tab>
            </tabs>
