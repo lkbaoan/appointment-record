@@ -3,10 +3,13 @@ package com.example.appointmentrecord;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class MainApplication extends Application {
     @Override
