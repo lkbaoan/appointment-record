@@ -3,27 +3,33 @@ package com.example.appointmentrecord;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class UserList {
-    DatabaseConnection db;
     ResultSet rs;
-    List<String> userList;
-    final String GET_USER_LIST = "SELECT userDisplayName from user";
+    Map<String, Integer> userList;
+    final String GET_USER_LIST = "SELECT userDisplayName, userId from user";
 
     public UserList() {
-        db = new DatabaseConnection();
-        rs = db.executeQuery(String.format(GET_USER_LIST));
-        userList = new ArrayList<>();
+        rs = DatabaseConnection.selectQuery(String.format(GET_USER_LIST));
+        userList = new HashMap<>();
         try {
             while (rs.next()) {
-                userList.add(rs.getString("userDisplayName"));
+                userList.put(rs.getString("userDisplayName"), rs.getInt("userId"));
             }
         } catch (SQLException e) {
-            System.err.println(" (3)Failed to fetch user list");
+            System.err.println("Failed to fetch user list");
         }
     }
-    public List<String> getUserList() {
+
+    /**
+     * Getter for user list
+     * @return userlist
+     */
+    public Map<String, Integer> getUserList() {
         return userList;
     }
+
 }

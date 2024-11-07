@@ -48,6 +48,12 @@
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.46.0.1</version>
         </dependency>
+        <!-- https://github.com/edvin/tornadofx-controls -->
+        <dependency>
+            <groupId>no.tornado</groupId>
+            <artifactId>tornadofx-controls</artifactId>
+            <version>1.0.6</version>
+        </dependency>
     </dependencies>
 
     <build>

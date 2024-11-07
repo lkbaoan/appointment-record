@@ -40,5 +40,8 @@ build/
 /.idea/uiDesigner.xml
 /.idea/encodings.xml
 
-## ignore databse
+## ignore databse ##
 src/database/database.db
+
+## ignore lib ##
+src/lib/*.jar

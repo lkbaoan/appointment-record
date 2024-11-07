@@ -4,6 +4,7 @@ module com.example.appointmentrecord {
 
     requires org.controlsfx.controls;
     requires java.sql;
+    requires tornadofx.controls;
 
     opens com.example.appointmentrecord to javafx.fxml;
     exports com.example.appointmentrecord;

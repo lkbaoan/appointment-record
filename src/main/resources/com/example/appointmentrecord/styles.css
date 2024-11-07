@@ -1,0 +1,95 @@
+.root {
+    -fx-font-size: 13;
+    -fx-font-family: "Courier";
+    -fx-background-color: linear-gradient(to bottom right, #ffffff, #dddddd);
+}
+/*Button Styling*/
+.affirmative-button {
+    -fx-background-radius: 5;
+    -fx-background-color:  #0096c7;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow( gaussian, #000000, 5,0,0.1,0);
+}
+.affirmative-button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.affirmative-button:pressed {
+    -fx-background-color: #0077b6;
+}
+.not-button {
+    -fx-background-radius: 5;
+    -fx-background-color: #ef233c;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow( gaussian, #000000, 5,0,0.1,0);
+}
+.not-button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.not-button:pressed {
+    -fx-background-color: #d90429;
+}
+/*----------------------*/
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-border-radius: 20;
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-text-fill: white;
+}
+.list-cell:even { /* <=== changed to even */
+    -fx-background-color: white;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #90e0ef;
+}
+/*---------------------*/
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+    -fx-padding: 0 0 0 5;
+}
+.tab-pane .tab-content-area {
+    -fx-border-style: solid;
+    -fx-border-color: #e5e5e5;
+    -fx-border-radius: 5;
+}
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+.tab-pane .tab
+{
+    -fx-background-color: #90e0ef;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+}
+
+.tab .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #f8f9fa;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #e9ecef;
+}
+/*----------------------------*/
+.table-view {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent; /* OR  -fx-background-insets: 0.0; */
+}
+.table-row-cell:filled:hover {
+    -fx-background-color: #90e0ef;
+}
+.table-row-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+}
