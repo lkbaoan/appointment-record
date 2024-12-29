@@ -3,7 +3,7 @@ package com.example.appointmentrecord;
 import java.sql.*;
 
 public class DatabaseConnection {
-    private static final String URL = "jdbc:sqlite:./src/database/database.db";
+    private static final String URL = "jdbc:sqlite:./database/database.db";
     private static Connection connection;
     private static Statement statement;
     private static ResultSet rs;
