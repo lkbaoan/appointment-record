@@ -135,7 +135,6 @@ public class MainController {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("new-record.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 160);
         Stage stage = new Stage();
-        stage.initStyle(StageStyle.UNDECORATED);
         stage.setAlwaysOnTop(true);
         stage.setTitle("Add Record");
         stage.setScene(scene);
